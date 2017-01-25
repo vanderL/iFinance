@@ -6,16 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AccountsComponent = (function () {
-    function AccountsComponent() {
+var AccountsNewComponent = (function () {
+    function AccountsNewComponent() {
     }
-    return AccountsComponent;
+    return AccountsNewComponent;
 }());
-AccountsComponent = __decorate([
+AccountsNewComponent = __decorate([
     core_1.Component({
-        templateUrl: './accounts.component.html',
-        styles: ['tboby tr {cursor: pointer}'],
+        templateUrl: './accounts-new.component.html',
+        styles: ['tboby tr {cursos: pointer}'],
     })
-], AccountsComponent);
-exports.AccountsComponent = AccountsComponent;
-//# sourceMappingURL=accounts.component.js.map
+], AccountsNewComponent);
+exports.AccountsNewComponent = AccountsNewComponent;
+//# sourceMappingURL=accounts-new.component.js.map

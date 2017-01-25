@@ -8,9 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
+var app_paginate_component_1 = require("../app/app-paginate.component");
 var accounts_component_1 = require("./accounts.component");
+var accounts_new_component_1 = require("./accounts-new.component");
+var accounts_edit_component_1 = require("./accounts-edit.component");
+var accounts_view_component_1 = require("./accounts-view.component");
 var appRoutes = [
     { path: 'accounts', component: accounts_component_1.AccountsComponent },
+    { path: 'accounts/new', component: accounts_new_component_1.AccountsNewComponent },
+    { path: 'accounts/:id', component: accounts_view_component_1.AccountsViewComponent },
+    { path: 'accounts/:id/edit', component: accounts_edit_component_1.AccountsEditComponent },
 ];
 var AccountsModule = (function () {
     function AccountsModule() {
@@ -25,6 +32,10 @@ AccountsModule = __decorate([
         ],
         declarations: [
             accounts_component_1.AccountsComponent,
+            accounts_view_component_1.AccountsViewComponent,
+            accounts_edit_component_1.AccountsEditComponent,
+            accounts_new_component_1.AccountsNewComponent,
+            app_paginate_component_1.AppPaginateComponent,
         ],
     })
 ], AccountsModule);

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   templateUrl: './accounts.component.html',
-  styles: ['tboby tr {cursos: pointer}'],
+  styles: ['tboby tr {cursor: pointer}'],
 })
 
 export class AccountsComponent{}
