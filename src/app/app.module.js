@@ -9,6 +9,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 var router_1 = require("@angular/router");
+var http_1 = require("@angular/http");
 var accounts_module_1 = require("../accounts/accounts.module");
 var appRoutes = [
     { path: '', redirectTo: '/accounts', pathMatch: 'full' },
@@ -23,7 +24,8 @@ AppModule = __decorate([
         imports: [
             accounts_module_1.AccountsModule,
             platform_browser_1.BrowserModule,
-            router_1.RouterModule.forRoot(appRoutes)
+            router_1.RouterModule.forRoot(appRoutes),
+            http_1.HttpModule
         ],
         declarations: [
             app_component_1.AppComponent

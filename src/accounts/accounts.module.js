@@ -9,6 +9,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
 var app_paginate_component_1 = require("../app/app-paginate.component");
+var app_http_service_1 = require("../app/app-http.service");
 var accounts_component_1 = require("./accounts.component");
 var accounts_new_component_1 = require("./accounts-new.component");
 var accounts_edit_component_1 = require("./accounts-edit.component");
@@ -37,6 +38,7 @@ AccountsModule = __decorate([
             accounts_new_component_1.AccountsNewComponent,
             app_paginate_component_1.AppPaginateComponent,
         ],
+        providers: [app_http_service_1.AppHttpService],
     })
 ], AccountsModule);
 exports.AccountsModule = AccountsModule;

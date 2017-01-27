@@ -18,10 +18,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let account of accounts.data" [routerLink]="['/accounts/' ]">
             <td>
-              Titulo!
-              <small>agência: 000 / conta: 0000 / código do banco: 0000</small>
+              {{ account.title }}
+              <small>agência: {{ account.agency }} / conta: {{ account.account_number }} / código do banco: {{ account.bank.code }}</small>
             </td>
           </tr>
         </tbody>

@@ -16,8 +16,16 @@ var AppHttpService = (function () {
         this.http = http;
     }
     AppHttpService.prototype.builder = function (resource) {
-        this.url = 'http://localhost:8000/api/' + resource;
+        this.url = 'http://localhost:3000/' + resource;
         return this;
+    };
+    AppHttpService.prototype.list = function () {
+        var url = this.url;
+        return this.http.get(url)
+            .toPromise()
+            .then(function (res) {
+            return res.json() || {};
+        });
     };
     AppHttpService.prototype.view = function (id) {
         return this.http.get(this.url + '/' + id)

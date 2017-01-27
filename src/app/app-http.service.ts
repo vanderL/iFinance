@@ -3,9 +3,6 @@ import { Http, Headers } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-interface Options {
-    limit?:number;
-}
 
 @Injectable()
 export class AppHttpService {
@@ -14,8 +11,18 @@ export class AppHttpService {
   constructor(private http: Http) { }
 
   builder (resource: string) {
-      this.url = 'http://localhost:8000/api/' + resource;
+      this.url = 'http://localhost:3000/' + resource;
       return this;
+    }
+
+    list () {
+      let url = this.url;
+
+      return this.http.get(url)
+        .toPromise()
+        .then((res) => {
+          return res.json() || {};
+        });
     }
 
     view (id: number) {
